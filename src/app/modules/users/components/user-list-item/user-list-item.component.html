@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-lg-1">
+        <i class="fa-thin fa-user fa-2x"></i>
+    </div>
+    <div class="col-lg-3 text-start fw-bold">
+        <span> {{user.firstName}} {{user.lastName}}</span>
+    </div>
+    <div class="col-lg-3 fw-light">
+        <span> {{user.email}}</span>
+    </div>
+    <div class="col-lg-2 fw-bold user-status">
+        <div class="status-group">
+            <div class="point"></div><span>Active</span>
+        </div>
+    </div>
+    <div class="col-lg-2 fw-light text-center">
+        <span> {{user.birthDate.getFullYear()}}/{{user.birthDate.getMonth() + 1}}/{{user.birthDate.getDate()}} </span>
+    </div>
+    <div class="col-lg-1 p-1 fw-light">
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-action">
+                <i class="fa-thin fa-user-pen"></i>
+            </button>
+            <button type="button" class="btn btn-action">
+                <i class="fa-thin fa-user-minus"></i>
+            </button>
+        </div>
+    </div>
+    <div class="user-item-line"></div>
+</div>
