@@ -1,0 +1,12 @@
+<ul>
+    <li>
+        <a routerLink="/home">
+            <i class="fa-solid fa-dumbbell"></i>
+        </a>
+    </li>
+    <li *ngFor="let sideBarItem of this.sideBarItemList">
+        <a routerLink="{{sideBarItem.link}}">
+            <i ngClass="{{sideBarItem.icon}}"></i> <span>{{sideBarItem.title}}</span>
+        </a>
+    </li>
+</ul>

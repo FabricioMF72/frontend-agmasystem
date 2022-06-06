@@ -1,0 +1,53 @@
+.row {
+    padding: 1rem 0 1rem 3.5rem;
+}
+
+span {
+    font-size: 1.2em;
+}
+
+.col-lg-1,
+.col-lg-3,
+.col-lg-2 {
+    padding: 10px;
+}
+
+.point {
+    width: 10px;
+    height: 10px;
+    background-color: green;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 1px;
+}
+
+.user-status {
+    border: 1.5px solid #DDDFE7;
+    border-radius: 10px;
+    width: max-content;
+    height: auto;
+}
+
+.status-group {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    font-size: 1em;
+}
+
+.btn-group {
+    background-color: white;
+    border: 1px solid #DDDFE7;
+    border-radius: 10px;
+    margin-left: auto;
+    position: relative;
+    display: block;
+    width: max-content;
+}
+
+.user-item-line {
+    border-bottom: 1.5px solid #DDDFE7;
+    margin-top: 10px;
+}
