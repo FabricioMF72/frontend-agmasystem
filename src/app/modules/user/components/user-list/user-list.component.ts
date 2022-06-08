@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/models/user';
+import { ALL_STATUS } from 'src/app/modules/core/constants/user.constant';
 import { UserService } from '../../services/user.service';
 
 @Component({
@@ -14,7 +15,7 @@ export class UserListComponent implements OnInit {
   ngOnInit(): void {
     const userObservable$ = this.userService.getUserList();
     userObservable$.subscribe((userList: User[]) => this.userList = userList);
-    this.userService.filterUsersByStatus('all');
+    this.userService.filterUsersByStatus(ALL_STATUS);
     console.log(this.userList)
   }
 

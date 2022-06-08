@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 import { User } from 'src/app/models/user';
+import { ALL_STATUS, DEFAULT_STATUS, USER_DUMMY_DATA } from '../../core/constants/user.constant';
 
 @Injectable({
   providedIn: 'root'
@@ -8,36 +9,8 @@ import { User } from 'src/app/models/user';
 export class UserService {
 
   private userList$ = new Subject<User[]>();
-  private userList =  [
-    {
-      id: 1,
-      firstName: 'John',
-      lastName: 'Doe',
-      identiticationId: 123456789,
-      birthDate: new Date('01/01/1990'),
-      email: 'John@Doe.com',
-      status : "active",
-      phone: '123456789',
-      firstEmergencyNumber: '123456789',
-      secondEmergencyNumber: '123456789',
-      address: '150 mts west of the city',
-      districtId: 1
-    },
-    {
-      id: 2,
-      firstName: 'Jane',
-      lastName: 'Doe',
-      identiticationId: 323456789,
-      birthDate: new Date('01/05/1992'),
-      email: 'Jane@Doe.com',
-      status : "inactive",
-      phone: '423456782',
-      firstEmergencyNumber: '423456782',
-      secondEmergencyNumber: '423456782',
-      address: '120 mts west of the city',
-      districtId: 2
-    }
-  ]
+  private userList =  USER_DUMMY_DATA;
+
   public getUserList(): Observable<User[]> {
     return this.userList$.asObservable();
   }
@@ -54,7 +27,7 @@ export class UserService {
   public addUser(user: User): number {
     user.id = this.userList.length + 1;
     user.birthDate = new Date(user.birthDate);
-    user.status = 'active';
+    user.status = DEFAULT_STATUS;
     this.userList.push(user);
     this.userList$.next(this.userList);
     return user.id;
@@ -75,7 +48,7 @@ export class UserService {
   }
 
   public filterUsersByStatus(filter: string): void {
-    if (filter === 'all') {
+    if (filter === ALL_STATUS) {
       this.userList = this.userList;
     } else {
       this.userList = this.userList.filter(user => user.status === filter);
