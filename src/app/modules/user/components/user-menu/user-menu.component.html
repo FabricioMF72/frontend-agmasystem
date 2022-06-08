@@ -2,19 +2,19 @@
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
             <div class="col-lg-2 col-sm-1">
-                <label for="formGroupExampleInput" class="form-label">Filter by status:</label>
+                <label for="formGroupExampleInput" class="form-label">{{this.filterLabelText}}</label>
                 <select class="form-select"  (change)="onChangeFilterByStatus($event)">
                     <option *ngFor="let filter of filterList" [value]="filter.value">{{filter.name}}</option>
                 </select>
             </div>
             <div class="col-lg-2 col-sm-2">
-                <label for="formGroupExampleInput" class="form-label">Order by:</label>
+                <label for="formGroupExampleInput" class="form-label">{{this.orderLabelText}}</label>
                 <select class="form-select" (change)="onChangeOrder($event)" aria-label="Default select example">
                     <option *ngFor="let order of orderList" [value]="order.value">{{order.name}}</option>
                 </select>
             </div>
             <div class="col-lg-6 col-sm-5">
-                <label for="formGroupExampleInput" class="form-label">Search for name, identification or email:</label>
+                <label for="formGroupExampleInput" class="form-label">{{this.searchLabelText}}</label>
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>

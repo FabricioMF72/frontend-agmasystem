@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { ERROR_TEXT, SUCCESS_TEXT, TOAST_DURATION, TOAST_POSITION, USER_ROUTE } from 'src/app/modules/core/constants/user.constant';
 import { User } from '../../../../models/user';
 import { UserService } from '../../services/user.service';
 @Component({
@@ -22,8 +23,8 @@ export class AddUserComponent implements OnInit {
     country: new FormControl('', [Validators.required]),
     birthDate: new FormControl('', [Validators.required])
   });
-  SUCCESS_MSG = 'User added successfully!';
-  ERROR_MSG = 'Something went wrong!';
+  successText = SUCCESS_TEXT;
+  errorText = ERROR_TEXT;
 
   constructor(
     private toastr: ToastrService,
@@ -38,22 +39,22 @@ export class AddUserComponent implements OnInit {
     try {
       this.newUser = form.value;
       console.log(this.userService.addUser(this.newUser))
-      this.toastr.success(undefined, this.SUCCESS_MSG,
+      this.toastr.success(undefined, this.successText,
         {
-          timeOut: 3000,
+          timeOut: TOAST_DURATION,
           closeButton: true,
-          positionClass: 'toast-bottom-right'
+          positionClass: TOAST_POSITION
         }
       );
       setTimeout(() => {
-        this.router.navigate(['/users']);
+        this.router.navigate([USER_ROUTE]);
       },3000);
     } catch (error) {
-      this.toastr.error(undefined, this.ERROR_MSG,
+      this.toastr.error(undefined, this.errorText,
         {
-          timeOut: 3000,
+          timeOut: TOAST_DURATION,
           closeButton: true,
-          positionClass: 'toast-bottom-right'
+          positionClass: TOAST_POSITION
         });
     }
   }
