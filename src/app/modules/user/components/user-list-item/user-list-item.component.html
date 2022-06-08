@@ -1,27 +1,27 @@
 <div class="row">
-    <div class="col-lg-1">
+    <div class="col-lg-1 col-sm-12">
         <i class="fa-thin fa-user fa-2x"></i>
     </div>
-    <div class="col-lg-3 text-start fw-bold">
+    <div class="col-lg-3 col-sm-6 text-start fw-bold">
         <span> {{user.firstName}} {{user.lastName}}</span>
     </div>
-    <div class="col-lg-3 fw-light">
+    <div class="col-lg-3 col-sm-6 fw-light">
         <span> {{user.email}}</span>
     </div>
-    <div class="col-lg-2 fw-bold user-status">
+    <div class="col-lg-2 col-sm-12 fw-bold user-status">
         <div class="status-group">
-            <div class="point"></div><span>Active</span>
+            <div class="point"></div><span> {{user.status}} </span>
         </div>
     </div>
-    <div class="col-lg-2 fw-light text-center">
+    <div class="col-lg-2 col-sm-12 fw-light text-center">
         <span> {{user.birthDate.getFullYear()}}/{{user.birthDate.getMonth() + 1}}/{{user.birthDate.getDate()}} </span>
     </div>
-    <div class="col-lg-1 p-1 fw-light">
+    <div class="col-lg-1 col-sm-12 p-1 fw-light">
         <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-action">
+            <button type="button" (click)="onClickUpdateUser(user)" class="btn btn-action">
                 <i class="fa-thin fa-user-pen"></i>
             </button>
-            <button type="button" class="btn btn-action">
+            <button type="button" (click)="onClickDeleteUser(user)" class="btn btn-action">
                 <i class="fa-thin fa-user-minus"></i>
             </button>
         </div>

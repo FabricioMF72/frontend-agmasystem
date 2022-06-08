@@ -6,6 +6,7 @@ export interface User {
     birthDate: Date;
     email: string;
     phone: string;
+    status: string;
     firstEmergencyNumber: string;
     secondEmergencyNumber: string;
     address: string;
