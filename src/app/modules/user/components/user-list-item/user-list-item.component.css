@@ -25,7 +25,7 @@ span {
 .user-status {
     border: 1.5px solid #DDDFE7;
     border-radius: 10px;
-    width: max-content;
+    width: 120px;
     height: auto;
 }
 
@@ -50,4 +50,29 @@ span {
 .user-item-line {
     border-bottom: 1.5px solid #DDDFE7;
     margin-top: 10px;
+}
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .row {
+        padding: 2rem;
+        text-align: center !important;
+    }
+
+    .user-status{
+        display: block;
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .btn-group{
+        margin-right: auto;
+    }
+
+    .text-start{
+        text-align: center!important;
+    }
 }
