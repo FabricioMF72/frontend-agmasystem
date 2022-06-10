@@ -1,12 +1,4 @@
-<div class="row p-5">
-    <div class="col-lg-1">
-        <span class="user-list-title"> {{userTitleText}} </span>
-        <span class="text-muted"> {{userListLength}} {{userTitleText}}</span>
-    </div>
-    <div class="col-lg-11">
-        <button type="button" class="btn btn-add-user" [routerLink]="[addUserRoute]" > {{addUserButtonText}}</button>
-    </div>
-</div>
+<app-sub-header [titleText]="userTitleText" [addRoute]="addUserRoute" [addButtonText]="addUserButtonText"></app-sub-header>
 
 
 

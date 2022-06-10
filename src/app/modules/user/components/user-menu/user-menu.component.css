@@ -1,3 +1,18 @@
 .row{
     background-color: #FAFBFF;
 }
+
+.col-sm-12{
+    margin-bottom: 15px;
+}
+
+.btn-outline-success{
+    border-color: #0E3878;
+    color: #0E3878;
+    
+}
+
+.btn-outline-success:hover{
+    background-color: #0E3878;
+    color: #fff;
+}

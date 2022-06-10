@@ -1,23 +1,23 @@
 <div class="row p-5">
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
-            <div class="col-lg-2 col-sm-1">
+            <div class="col-lg-2 col-sm-12">
                 <label for="formGroupExampleInput" class="form-label">{{this.filterLabelText}}</label>
                 <select class="form-select"  (change)="onChangeFilterByStatus($event)">
                     <option *ngFor="let filter of filterList" [value]="filter.value">{{filter.name}}</option>
                 </select>
             </div>
-            <div class="col-lg-2 col-sm-2">
+            <div class="col-lg-2 col-sm-12">
                 <label for="formGroupExampleInput" class="form-label">{{this.orderLabelText}}</label>
                 <select class="form-select" (change)="onChangeOrder($event)" aria-label="Default select example">
                     <option *ngFor="let order of orderList" [value]="order.value">{{order.name}}</option>
                 </select>
             </div>
-            <div class="col-lg-6 col-sm-5">
+            <div class="col-lg-6 col-sm-12">
                 <label for="formGroupExampleInput" class="form-label">{{this.searchLabelText}}</label>
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <button class="btn btn-outline-success" type="submit"><i class="fa-regular fa-magnifying-glass"></i></button>
                 </form>
             </div>
         </div>
