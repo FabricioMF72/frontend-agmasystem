@@ -1,0 +1,44 @@
+.card{
+    margin-bottom: 40px;
+    width: 100%!important;
+    height: auto;
+}
+
+.card-header{
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #e3e3e3;
+    padding: 10px;
+    height: 100px;
+}
+.header-text{
+    text-align: end;
+    margin-top: 40px;
+    margin-right: 20px;
+}
+.img-card{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-top: 40px;
+}
+
+.card-title{
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.card-text{
+    font-size: 20px;
+    color: #000000;
+}
+
+.btn-add-user{
+    color: #fff;
+    background-color: #0E3878;
+    border-color: #0E3878;
+    border-radius: 15px;
+    margin-left: auto;
+    position: relative;
+    display: block;
+    width: 100%;
+}
