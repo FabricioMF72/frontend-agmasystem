@@ -11,6 +11,7 @@ ul {
 
 li:first-child{
     margin-bottom: 7vh;
+    margin-top: 5vh;
 }
 
 li {
@@ -21,7 +22,6 @@ li {
     border-radius: 15px;
     height: auto;
     width: auto;
-
 }
 
 a{
@@ -35,14 +35,36 @@ a:hover{
 
 i{  
     font-size: 30px;
-    padding: 15%;
+    width: 100%;
     text-align:center;
-    
+}
+
+.form-select{
+    margin-top: 5vh;
 }
 
 span{
-    font-size: 20px;
-    padding: 15%;
+    width: 100%;
     text-align:center;
-    
+    font-size: 20px;
+    position: relative;
+    display: block;
+}
+
+.form-select{
+    width: 100%;
+    height: auto;
+    border: 1px solid #050517;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 1rem;
+    color: #050517;
+    margin-bottom: 1rem;
+    overflow:hidden;
+    text-overflow: ellipsis;
+}
+
+option{
+    font-size: 1rem;
+    color: #050517
 }

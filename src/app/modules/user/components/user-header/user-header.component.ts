@@ -28,7 +28,6 @@ export class UserHeaderComponent implements OnInit {
     }
     );
     this.userService.filterUsersByStatus(ALL_STATUS);
-    console.log(this.userList)
   }
 
   ngOnDestroy(): void {

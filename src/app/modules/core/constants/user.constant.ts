@@ -80,7 +80,7 @@ export const ORDER_LABEL_TEXT = 'Order by:';
 
 export const SEARCH_LABEL_TEXT = 'Search for name, identification or email:';
 
-export const USER_TITLE_TEXT = 'User';
+export const USER_TITLE_TEXT = 'Users';
 
 export const ADD_USER_BUTTON_TEXT = '+ Add user';
 

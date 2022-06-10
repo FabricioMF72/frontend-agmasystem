@@ -1,0 +1,13 @@
+.profile-name{
+    font-size: 1rem;
+    color: #050517;
+    margin-bottom: 1rem;
+}
+
+.nav-item{
+    padding: 10px;
+}
+
+.navbar-nav .dropdown-menu{
+    border: 1px solid #050517;
+}
