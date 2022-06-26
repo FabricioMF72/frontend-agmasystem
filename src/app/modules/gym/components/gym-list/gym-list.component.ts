@@ -7,7 +7,7 @@ import { GymService } from '../../services/gym.service';
 @Component({
   selector: 'app-gym-list',
   templateUrl: './gym-list.component.html',
-  styleUrls: ['./gym-list.component.css']
+  styleUrls: ['./gym-list.component.scss']
 })
 export class GymListComponent implements OnInit {
   gymList!: Gym[];
@@ -19,7 +19,7 @@ export class GymListComponent implements OnInit {
     this.gymSubscription$ = gymObservable$.subscribe((gymList: Gym[]) => {
       this.gymList = gymList
     });
-    this.gymService.setgymList(GYM_DUMMY_DATA);
+    this.gymService.setGymList(GYM_DUMMY_DATA);
     console.log(this.gymList)
   }
 

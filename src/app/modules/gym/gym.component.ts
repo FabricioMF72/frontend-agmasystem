@@ -4,7 +4,7 @@ import { ADD_GYM_BUTTON_TEXT, ADD_GYM_ROUTE, GYM_TITLE_TEXT } from '../core/cons
 @Component({
   selector: 'app-gym',
   templateUrl: './gym.component.html',
-  styleUrls: ['./gym.component.css']
+  styleUrls: ['./gym.component.scss']
 })
 export class GymComponent implements OnInit {
   

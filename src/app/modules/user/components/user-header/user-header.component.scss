@@ -1,7 +1,8 @@
+@import '../../../../../assets/scss/variables';
 .btn-add-user{
     color: #fff;
-    background-color: #0E3878;
-    border-color: #0E3878;
+    background-color: $primary;
+    border-color: $primary;
     border-radius: 15px;
     margin-left: auto;
     position: relative;
@@ -11,11 +12,11 @@
 .user-list-title{
     font-size: 40px;
     font-weight: bold;
-    color: #0E3878;
+    color: $primary;
     margin-bottom: 20px;
 }
 
 .text-muted{
-    color: #0E3878!important;
+    color: $primary!important;
 }
 

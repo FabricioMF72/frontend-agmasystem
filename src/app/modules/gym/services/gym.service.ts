@@ -18,17 +18,17 @@ export class GymService {
     return this.gymList$.asObservable();
   }
 
-  public setgymList(value: Gym[]) {
+  public setGymList(value: Gym[]) {
     this.gymList = value;
     this.gymList$.next(this.gymList);
   }
 
-  public getgymById(id: number): Gym {
+  public getGymById(id: number): Gym {
     let gym: Gym = this.gymList.find(gym => gym.id === id) as Gym;
     return gym;
   }
 
-  public addgym(gym: Gym): number {
+  public addGym(gym: Gym): number {
     gym.id = this.gymList.length + 1;
     gym.created_at = new Date(gym.created_at);
     this.gymList.push(gym);
@@ -36,14 +36,14 @@ export class GymService {
     return gym.id;
   }
 
-  public updategym(gym: Gym): Gym {
+  public updateGym(gym: Gym): Gym {
     let index = this.gymList.findIndex(u => u.id === gym.id);
     this.gymList[index] = gym;
     this.gymList$.next(this.gymList);
     return gym;
   }
 
-  public deletegym(id: number): Gym[] {
+  public deleteGym(id: number): Gym[] {
     let index = this.gymList.findIndex(u => u.id === id);
     let response = this.gymList.splice(index, 1);
     this.gymList$.next(this.gymList);

@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import '../src/assets/scss/variables';
 #toast-container>.toast-success {
-    background-color: #0E3878 !important; 
+    background-color: $primary !important; 
 }

@@ -4,7 +4,7 @@ import { ADD_GYM_BUTTON_TEXT, ADD_GYM_ROUTE, GYM_TITLE_TEXT } from 'src/app/modu
 @Component({
   selector: 'app-gym-header',
   templateUrl: './gym-header.component.html',
-  styleUrls: ['./gym-header.component.css']
+  styleUrls: ['./gym-header.component.scss']
 })
 export class GymHeaderComponent implements OnInit {
   gymTitleText: string = GYM_TITLE_TEXT;

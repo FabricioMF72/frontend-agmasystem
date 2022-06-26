@@ -7,6 +7,8 @@ import { GymHeaderComponent } from './components/gym-header/gym-header.component
 import { SharedModule } from '../shared/shared.module';
 import { GymListComponent } from './components/gym-list/gym-list.component';
 import { GymListItemComponent } from './components/gym-list-item/gym-list-item.component';
+import { AddGymComponent } from './components/add-gym/add-gym.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -14,12 +16,14 @@ import { GymListItemComponent } from './components/gym-list-item/gym-list-item.c
     GymComponent,
     GymHeaderComponent,
     GymListComponent,
-    GymListItemComponent
+    GymListItemComponent,
+    AddGymComponent
   ],
   imports: [
     CommonModule,
     GymRoutingModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule
   ]
 })
 export class GymModule { }
