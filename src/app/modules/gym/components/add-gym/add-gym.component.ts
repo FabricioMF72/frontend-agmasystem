@@ -3,8 +3,9 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Gym } from 'src/app/models/gym';
+import { SUCCESS_TEXT_CREATED_GYM } from 'src/app/modules/core/constants/gym.constant';
 import { GYM_ROUTE } from 'src/app/modules/core/constants/router.constant';
-import { ERROR_TEXT, SUCCESS_TEXT, TOAST_DURATION, TOAST_POSITION } from 'src/app/modules/core/constants/user.constant';
+import { ERROR_TEXT, TOAST_DURATION, TOAST_POSITION } from 'src/app/modules/core/constants/user.constant';
 import { GymService } from '../../services/gym.service';
 
 @Component({
@@ -17,15 +18,14 @@ export class AddGymComponent implements OnInit {
   newGym!: Gym;
   gymForm = new FormGroup({
     name: new FormControl('', [Validators.required]),
-    country: new FormControl('', [Validators.required]),
-    city: new FormControl('', [Validators.required]),
     address: new FormControl('', [Validators.required]),
-    zip: new FormControl('', [Validators.required]),
-    phone: new FormControl('', [Validators.required]),
+    cityId: new FormControl('', [Validators.required]),
+    phoneNumber: new FormControl(88888888, [Validators.required]),
+    zipCode: new FormControl(10000, [Validators.required, Validators.minLength(5), Validators.maxLength(5)]),
     email: new FormControl('', [Validators.required]),
-    image: new FormControl('', [Validators.required])
+    imageUrl: new FormControl('', [Validators.required]),
   });
-  successText = SUCCESS_TEXT;
+  successText = SUCCESS_TEXT_CREATED_GYM;
   errorText = ERROR_TEXT;
 
   constructor(
@@ -38,11 +38,10 @@ export class AddGymComponent implements OnInit {
   }
   
   async onSubmit(form: FormGroup) {
-    console.log(form)
-    console.log(form.value)
     try {
       this.newGym = form.value;
-      console.log(this.gymService.addGym(this.newGym))
+      console.log(this.newGym);
+      this.gymService.addGym(this.newGym)
       this.toastr.success(undefined, this.successText,
         {
           timeOut: TOAST_DURATION,

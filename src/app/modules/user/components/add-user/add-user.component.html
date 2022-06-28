@@ -19,9 +19,9 @@
             <input type="email" class="form-control" id="Email" formControlName="email">
         </div>
         <div class="col-lg-6">
-            <label for="exampleFormControlInput1" class="form-label">Identification<span class="text-danger" *ngIf="userForm.get('identification')!.errors && 
-                userForm.get('identification')!.hasError('required')">*</span></label>
-            <input type="number" class="form-control" id="Identification" formControlName="identification">
+            <label for="exampleFormControlInput1" class="form-label">Identitication<span class="text-danger" *ngIf="userForm.get('identiticationId')!.errors && 
+                userForm.get('identiticationId')!.hasError('required')">*</span></label>
+            <input type="number" class="form-control" id="identiticationId" formControlName="identiticationId">
         </div>
         <div class="col-lg-6">
             <label for="exampleFormControlInput1" class="form-label">Birthdate<span class="text-danger" *ngIf="userForm.get('birthDate')!.errors && 
@@ -29,21 +29,20 @@
             <input type="date" class="form-control" id="birthDate" formControlName="birthDate">
         </div>
         <div class="col-lg-6">
-            <label for="exampleFormControlInput1" class="form-label">Phone Number<span class="text-danger" *ngIf="userForm.get('phone')!.errors && 
-                userForm.get('phone')!.hasError('required')">*</span></label>
-            <input type="tel" class="form-control" id="PhoneNumber" formControlName="phone">
+            <label for="exampleFormControlInput1" class="form-label">Phone Number<span class="text-danger" *ngIf="userForm.get('phoneNumber')!.errors && 
+                userForm.get('phoneNumber')!.hasError('required')">*</span></label>
+            <input type="tel" class="form-control" id="phoneNumberNumber" formControlName="phoneNumber">
         </div>
         <div class="col-lg-6">
-            <label for="exampleFormControlInput1" class="form-label">Country<span class="text-danger" *ngIf="userForm.get('country')!.errors && 
-                userForm.get('country')!.hasError('required')">*</span></label>
-            <select class="form-select" aria-label="Default select example" id="Country" formControlName="country">
+            <label for="exampleFormControlInput1" class="form-label">Country<span class="text-danger">*</span></label>
+            <select class="form-select" aria-label="Default select example" id="Country">
                 <option value="CR" selected>Costa Rica</option>
               </select>
         </div>
         <div class="col-lg-6">
-            <label for="exampleFormControlInput1" class="form-label">City<span class="text-danger" *ngIf="userForm.get('city')!.errors && 
-                userForm.get('city')!.hasError('required')">*</span></label>
-            <select class="form-select" aria-label="Default select example" id="City" formControlName="city">
+            <label for="exampleFormControlInput1" class="form-label">City<span class="text-danger" *ngIf="userForm.get('cityId')!.errors && 
+                userForm.get('cityId')!.hasError('required')">*</span></label>
+            <select class="form-select" aria-label="Default select example" id="cityId" formControlName="cityId">
                 <option selected value="0">San José</option>
                 <option value="1">Cartago</option>
                 <option value="2">Heredia</option>
@@ -53,7 +52,12 @@
         <div class="col-lg-6">
             <label for="exampleFormControlInput1" class="form-label">Address<span class="text-danger" *ngIf="userForm.get('address')!.errors && 
                 userForm.get('address')!.hasError('required')">*</span></label>
-            <input type="text" class="form-control" id="Address" formControlName="address">
+            <input type="text" class="form-control" id="address" formControlName="address">
+        </div>
+        <div class="col-lg-6">
+            <label for="exampleFormControlInput1" class="form-label">Zip Code<span class="text-danger" *ngIf="userForm.get('zipCode')!.errors && 
+                userForm.get('zipCode')!.hasError('required')">*</span></label>
+            <input type="number" class="form-control" id="zipCode" formControlName="zipCode">
         </div>
         <div class="col-lg-8 offset-lg-2">
             <button type="submit" [disabled]="userForm.invalid" class="btn btn-add-user">Create new user</button>

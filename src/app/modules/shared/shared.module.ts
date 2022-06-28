@@ -5,6 +5,7 @@ import { SharedRoutingModule } from './shared-routing.module';
 import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { SubHeaderComponent } from './components/sub-header/sub-header.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { SubHeaderComponent } from './components/sub-header/sub-header.component
   ],
   imports: [
     CommonModule,
-    SharedRoutingModule
+    SharedRoutingModule,
+    FormsModule
   ],
   exports: [
     HeaderComponent,

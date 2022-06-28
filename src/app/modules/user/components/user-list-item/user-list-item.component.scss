@@ -1,3 +1,4 @@
+@import '../../../../../assets/scss/variables';
 .row {
     padding: 1rem 0 1rem 3.5rem;
 }
@@ -15,13 +16,18 @@ span {
 .point {
     width: 10px;
     height: 10px;
-    background-color: green;
     border-radius: 50%;
     display: inline-block;
     margin-right: 10px;
     margin-bottom: 1px;
 }
 
+.active{
+    background-color: $active;
+}
+.inactive{
+    background-color: $inactive;
+}
 .user-status {
     border: 1.5px solid #DDDFE7;
     border-radius: 10px;

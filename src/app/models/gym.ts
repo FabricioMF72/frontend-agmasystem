@@ -1,13 +1,15 @@
 export interface Gym {
-    id: number;
+    gymId: number;
     name: string;
-    country: string;
-    city: string;
+    cityId: number;
     address: string;
-    zip: string;
-    phone: string;
+    zipCode: number;
+    phoneNumber: number;
     email: string;
-    image: string;
-    created_at: Date;
-    updated_at: Date;
+    imageUrl: string;
+    selected: boolean;
+    createdAt: Date;
+    updatedAt: Date;
+    deletedAt?: Date;
+    createdBy: number;
 }

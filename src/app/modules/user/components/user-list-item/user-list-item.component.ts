@@ -15,7 +15,7 @@ export class UserListItemComponent implements OnInit {
   }
 
   onClickDeleteUser(user:User){
-    this.userService.deleteUser(user.id);
+    this.userService.deleteUser(user.userId);
     console.log(this.userService.getUserList())
   }
 

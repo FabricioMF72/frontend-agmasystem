@@ -1,3 +1,4 @@
+@import '../../../../../assets/scss/variables';
 .card{
     margin-bottom: 40px;
     width: 100%!important;
@@ -41,4 +42,8 @@
     position: relative;
     display: block;
     width: 100%;
+}
+
+.select{
+    border: 4px solid $primary;
 }
